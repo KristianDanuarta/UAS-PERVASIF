@@ -1,0 +1,42 @@
+1. Panduan untuk Administrator (Dosen/Pengawas)
+A. Persiapan Sebelum Ujian
+1. Validasi Data: Pastikan file mahasiswa.xlsx berada di folder yang sama dengan app.py dan format kolom NIM serta NAMA sudah sesuai dengan data peserta.
+
+2. Koneksi Database: Pastikan file credentials.json aktif dan Google Sheet Log_Ujian dapat diakses untuk mencatat log.
+
+3. Menjalankan Sistem: Jalankan aplikasi melalui terminal dengan perintah:
+
+Bash
+streamlit run app.py
+B. Monitoring dan Penilaian
+Setiap aktivitas mahasiswa akan tercatat secara otomatis dan real-time di Google Sheet Log_Ujian dengan format:
+
+Timestamp: Waktu pencatatan data.
+
+Nama & NIM: Identitas mahasiswa yang mengakses.
+
+Skor / Keterangan: Berisi nilai akhir ujian (0-100) atau catatan jenis pelanggaran yang dilakukan mahasiswa.
+
+🎓 2. Panduan untuk Peserta Ujian (Mahasiswa)
+A. Proses Login
+1. Akses tautan aplikasi ujian yang diberikan oleh pengawas.
+
+2. Masukkan Nama Lengkap dan NIM secara benar.
+
+3. Klik tombol 🚀 Mulai Ujian untuk masuk ke halaman soal.
+
+B. Regulasi dan Sistem Keamanan (Anti-Cheating)
+Ujian menggunakan sistem proteksi ketat. Sesi ujian akan langsung dikunci otomatis, pengerjaan dihentikan, dan dianggap gugur (Nilai 0) jika melakukan hal berikut:
+
+1. Berpindah Jendela/Tab: Menutup, meminimalkan (minimize), atau membuka tab baru pada browser.
+
+2. Membuka Aplikasi Lain: Membuka software lain di perangkat (misal: kalkulator, dokumen, atau aplikasi chat).
+
+3. AFK (Away From Keyboard): Tidak menggerakkan mouse atau menekan keyboard selama 25 detik. Sistem memberikan toleransi maksimal 2 kali peringatan sebelum pemblokiran total pada peringatan ke-3.
+
+C. Pengumpulan Ujian
+1. Selesaikan semua soal sebelum batasan waktu 3 menit (180 detik) berakhir.
+
+2. Klik tombol ✅ Selesai & Kumpulkan Ujian di bagian bawah halaman.
+
+3. Setelah selesai, layar akan menampilkan konfirmasi bahwa ujian telah berhasil disimpan.
